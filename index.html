@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>今日の献立プランナー</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">毎日の献立をもっとラクに</p>
+        <h1>今日の献立プランナー</h1>
+        <p class="hero-text">
+          主婦の時間を守るために、初心者でも安心して作れる献立と、YouTubeなどの参考動画をすぐ見られるようにします。
+        </p>
+      </header>
+
+      <main class="content">
+        <section class="panel controls">
+          <h2>献立の条件を選ぶ</h2>
+          <form id="meal-form">
+            <label>
+              気分
+              <select id="mood">
+                <option value="和風">和風</option>
+                <option value="洋風">洋風</option>
+                <option value="さっぱり">さっぱり</option>
+                <option value="ほっこり">ほっこり</option>
+                <option value="ガッツリ">ガッツリ</option>
+                <option value="時短">時短</option>
+                <option value="子ども向け">子ども向け</option>
+                <option value="節約">節約</option>
+              </select>
+            </label>
+
+            <label>
+              栄養バランス
+              <select id="balance">
+                <option value="standard">バランス重視</option>
+                <option value="protein">たんぱく質重視</option>
+                <option value="vegetable">野菜多め</option>
+                <option value="iron">鉄分補給</option>
+                <option value="fiber">食物繊維重視</option>
+                <option value="calcium">カルシウム重視</option>
+                <option value="lowcarb">低糖質寄り</option>
+              </select>
+            </label>
+
+            <label>
+              家族人数
+              <input id="people" type="number" min="1" max="6" value="4" />
+            </label>
+
+            <label>
+              予算目安
+              <select id="budget">
+                <option value="budget">お手頃</option>
+                <option value="normal">標準</option>
+                <option value="cozy">ちょっと贅沢</option>
+              </select>
+            </label>
+
+            <button type="submit">献立を作る</button>
+          </form>
+        </section>
+
+        <section class="panel result" id="result-panel" aria-live="polite">
+          <div class="placeholder">
+            <h2>今日の献立がここに表示されます</h2>
+            <p>条件を選んで、すぐに献立プランを作成しましょう。</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
